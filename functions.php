@@ -4,7 +4,7 @@
     require_once('wp-bootstrap-navwalker.php');
 
     // Add Featured Image Support Thambnail
-    add_theme_support('post-thembnails');
+    add_theme_support('post-thumbnails');
 
     /*
     /*add my custom system
