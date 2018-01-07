@@ -1,24 +1,24 @@
 <?php get_header();?>
 
-    <!-- Get Posts Dynamically With Loop -->
-    <?php  
-        // Check if there are posts
-        if(have_posts()){
-            // Loop Through Posts
-            while(have_posts()){
-                the_post();
-    ?>
+    
    
      <!-- Start Posts -->
-    <section class="posts">
-        <div class="container">
+    <section class="posts col-md-8">
+        <!-- Get Posts Dynamically With Loop -->
+        <?php  
+            // Check if there are posts
+            if(have_posts()){
+                // Loop Through Posts
+                while(have_posts()){
+                    the_post();
+        ?>
+        <div class="post">
             <!-- Start Post -->
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                    <!-- <img class="img-responsive" src="/wordpress/wp-content/themes/mytheme/img/post-img.png" alt="post-img"> -->
+                <div class="col-md-6 col-sm-6 col-xs-6 ">
                     <?php the_post_thumbnail( ' ' , ['class' => 'img-responsive img-thumbnail'] );  ?>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="col-md-6 col-sm-6 col-xs-6 ">
                     <div class="post-header">
                         <span class="tag text-uppercase"><?php the_category(' ') ?></span>
                         <h3 class="post-title">
@@ -30,7 +30,7 @@
                         <span class="post-auther"> by <?php the_author_posts_link(); ?></span>
                     </div>
                     <div class="post-content">
-                        <?php the_content(); ?>
+                        <?php the_content('Read Full Article ...'); ?>
                     </div>
                     <div class="post-comment">
                         <div class="comment pull-left">
@@ -41,7 +41,6 @@
                             <i class='fa fa-twitter'></i>
                             <i class='fa fa-instagram'></i>
                             <i class='fa fa-facebook'></i>
-                            <i class='fa fa-facebook'></i>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -49,16 +48,22 @@
             </div>
             <!-- End Post -->
         </div>
+        <?php                           
+                }
+                // End of Loop
+            }  
+        ?>
     </section>
     <!-- End Posts -->
 
-    <?php           
-                
-            }
-            // End of Loop
-        }
+
+
+    <!-- Start Aside -->
+    <aside class="sidebar col-md-4">
     
-    ?>
+    </aside>
+    <!-- End Aside -->
+    <div class="clearfix"></div>
 
     
    
