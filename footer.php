@@ -1,6 +1,6 @@
     
     <footer class="text-center footer">
-        copyright &copy; all right reserved 
+        copyright &copy; <?php echo date('Y') . " "; bloginfo('name'); ?>
     </footer>
     
     

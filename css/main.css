@@ -3,7 +3,6 @@
     background: #333;
     color : #FFF;
     padding: 20px;
-    position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -28,11 +27,12 @@
     margin: -18px 0px 35px -85px;
 }
 
-.post-header .tag>a{
+.post-header .category>a,
+.post-header .category .fa,.post-header .post-tags .fa{
     font-size: 14px;
     color: #b59f5b;
     font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+    
 }
 .post-header .post-title>a{
     font-size: 20px;
@@ -49,8 +49,8 @@
     margin-right: 15px;
     font-family: 'Open Sans', sans-serif;
 }
-.post-header .post-auther,
-.post-header .post-auther>a{
+.post-header .post-auther,.post-header .post-tags>a,
+.post-header .post-auther>a,.post-header .post-tags .fa{
     color:#000;
     font-weight: bold;
 }

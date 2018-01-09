@@ -2,7 +2,12 @@
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>"/>
-        <title><?php bloginfo('name'); ?></title>        
+        <title>
+            <?php
+                wp_title('|',true,'right'); 
+                bloginfo('name'); 
+            ?>
+        </title>        
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         <?php wp_head(); ?>       
     </head>
@@ -14,7 +19,7 @@
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Sagda</a>
+                    <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
                 </div><!-- End of navbar-header -->  
              
                 <!-- Navbar collapsed Menu -->

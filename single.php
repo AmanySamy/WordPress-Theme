@@ -8,9 +8,7 @@
         <?php  
             // Check if there are posts
             if(have_posts()){
-                // Loop Through Posts
-                while(have_posts()){
-                    the_post();
+               the_post(); 
         ?>
         <div class="post">
             <!-- Start Post -->
@@ -43,7 +41,7 @@
                         </span>
                     </div>
                     <div class="post-content">
-                        <?php the_content('Read Full Article ...'); ?>
+                        <?php the_content(); ?>
                     </div>
                     <div class="post-comment">
                         <div class="comment pull-left">
@@ -62,8 +60,7 @@
             <!-- End Post -->
         </div>
         <?php                           
-                }// End of Loop
-                
+             
             } //End If Condition 
 
             //  Get Previous Pages 
