@@ -31,19 +31,18 @@
 .post-header .category .fa,.post-header .post-tags .fa{
     font-size: 14px;
     color: #b59f5b;
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
 .post-header .post-title>a{
     font-size: 20px;
     font-weight: bold;
-
     margin-bottom: 30px;
     font-family: 'Josefin Sans', sans-serif;
     color:#0f0d0e;
 }
 .post-header .post-date,
-.post-header .post-auther{
+.post-header .post-auther
+{
     font-size: 12px;
     color: #b8b8b8;
     margin-right: 15px;
@@ -53,6 +52,7 @@
 .post-header .post-auther>a,.post-header .post-tags .fa{
     color:#000;
     font-weight: bold;
+    font-size: 12px;
 }
 .post-content p{
     font-size: 15px;
@@ -76,8 +76,48 @@
 .post-comment .share i{
     margin: 0 5px;
 }
+.post-pagination{
+    position: relative;
+}
+.post-pagination .no-next,
+.post-pagination .next>a,
+.post-pagination .no-prev,
+.post-pagination .prev>a
+{
+    color: #000;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid #b59f5b;
+    border-radius: 20px;
+    padding: 5px 10px;
+    position: absolute;
+    transition: .3s all linear;
+}
+.post-pagination .next>a:hover,
+.post-pagination .prev>a:hover{
+    background: #b59f5b;
+    color: #FFF;
+}
+.no-next:hover,
+.no-prev:hover{
+    color:#CCC;
+    cursor: not-allowed;
+}
+.no-next,.next>a{
+    right: 10px;
+}
+.no-prev,.prev>a{
+    left: 10px;
+}
 
 /* End Posts */
+
+/* Start Sigle Post */
+.single-post .post-edit-link{
+
+
+}
+/* End Sigle Post */
 
 /* Start Aside */
 aside{

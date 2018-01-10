@@ -67,17 +67,21 @@
             } //End If Condition 
 
             //  Get Previous Pages 
+            echo '<div class="post-pagination">';
             if(get_previous_posts_link()){
-                previous_posts_link('Prev');
+                echo "<span class='prev'>"; previous_posts_link('Prev'); echo "</span>";
             }else{
-                echo 'No Previous Pages';
+                echo '<span class="no-prev">Prev</span>';
             }
             //  Get Next Pages 
             if(get_next_posts_link()){
-                next_posts_link('Next');
+                echo "<span class='next'>"; next_posts_link('Next'); echo "</span>";
             }else{
-                echo 'No Next Pages';
+                echo '<span class="no-next">Next</span>';
             }
+            echo '</div>';
+
+            
         ?>
 
         

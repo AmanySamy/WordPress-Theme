@@ -3,16 +3,18 @@
     
    
      <!-- Start Posts -->
-    <section class="posts col-md-8">
+    <section class="posts">
         <!-- Get Posts Dynamically With Loop -->
         <?php  
             // Check if there are posts
             if(have_posts()){
                the_post(); 
         ?>
-        <div class="post">
+        <div class="post single-post">
+            <!-- Make Edit Post -->            
+            <?php edit_post_link('<i class="fa fa-pencil"></i> Edit'); ?>
             <!-- Start Post -->
-            <div class="row">
+            <div class="row">              
                 <div class="col-md-6 col-sm-6 col-xs-6 ">
                     <?php the_post_thumbnail( ' ' , ['class' => 'img-responsive img-thumbnail'] );  ?>
                 </div>
@@ -27,8 +29,8 @@
                                 <?php the_title(); ?>
                             </a>
                         </h3>                       
-                        <span class="post-date"><?php the_time('F j, Y'); ?></span>
-                        <span class="post-auther"> By <?php the_author_posts_link(); ?></span>
+                        <span class="post-date"> <i class="fa fa-calendar fa-fw fa-lg"></i> <?php the_time('F j, Y'); ?></span>
+                        <span class="post-auther"> <i class="fa fa-user fa-fw fa-lg"></i> <?php the_author_posts_link(); ?></span>
                         <span class="post-tags"> 
                             <i class="fa fa-tags"></i>
                             <?php 
@@ -64,17 +66,22 @@
             } //End If Condition 
 
             //  Get Previous Pages 
-            if(get_previous_posts_link()){
-                previous_posts_link('Prev');
+            echo '<div class="post-pagination">';
+            if(get_previous_post_link()){
+                echo "<span class='prev'>"; previous_post_link('%link' , 'Previous Article: %title'); echo "</span>";
             }else{
-                echo 'No Previous Pages';
+                echo '<span class="no-prev">Previous Article: None</span>';
             }
             //  Get Next Pages 
-            if(get_next_posts_link()){
-                next_posts_link('Next');
+            if(get_next_post_link()){
+                echo "<span class='next'>"; next_post_link('%link' , 'Next Article: %title'); echo "</span>";
             }else{
-                echo 'No Next Pages';
+                echo '<span class="no-next">Next Article: None</span>';
             }
+            echo '</div>';
+
+            //Display Comments
+            comments_template();
         ?>
 
         
@@ -83,11 +90,7 @@
 
 
 
-    <!-- Start Aside -->
-    <aside class="sidebar col-md-4">
-    
-    </aside>
-    <!-- End Aside -->
+   
     <div class="clearfix"></div>
 
     
