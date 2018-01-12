@@ -9,7 +9,7 @@
 } 
 /*========= End Footer ============*/ 
 
-/* Start Posts */
+/* ===================== Start Posts ===================== */
 .posts{
     padding: 50px 20px;
 }
@@ -76,8 +76,39 @@
 .post-comment .share i{
     margin: 0 5px;
 }
+/* =====================Start Post Author ===================== */
+.author{
+    padding: 20px;
+    border: 4px solid #e1d9bd;
+    margin: 0px;
+}
+.author .author-img{
+
+}
+.author .author-info{
+
+}
+.author .author-info h4{
+    font-family: 'Open Sans';
+    color: #b59f5b;
+    font-weight: bold;
+}
+.author .author-info h4 .nickname{
+    color: #7c7c7c;
+}
+.author .author-info .biography{
+    font-size: 14px;
+    color: #b8b8b8;
+    margin-right: 15px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+}
+
+/* ===================== Start Post Pagination ===================== */
 .post-pagination{
     position: relative;
+    height: 50px;
+    margin: 40px 0px 20px;
 }
 .post-pagination .no-next,
 .post-pagination .next>a,
@@ -112,11 +143,79 @@
 
 /* End Posts */
 
+
+
 /* Start Sigle Post */
 .single-post .post-edit-link{
-
-
 }
+/* ================= Start Comment ============ */
+.comments-count,.comment-reply-title{
+    padding: 20px 25px;
+    border: 4px solid #e1d9bd;
+    border-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 50px;
+    color: #b59f5b;
+    background: #e1d9bd;
+    font-weight: bold;
+}
+.comments-list,.comment-form{
+    padding: 10px 5px;
+    border: 4px solid #e1d9bd;
+}
+.comments-list ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.comments-list > .comment{
+    background: #e1d9bd;
+    padding: 20px ;
+    border-top: 2px solid #b59f5b;
+    margin:20px;
+    position: relative;
+}
+.comments-list > .comment > .children > .comment,
+.comments-list > .comment > .children > .comment .children{
+    background: #e1d9bd;
+    padding: 20px ;
+    border-top: 2px solid #b59f5b;
+    margin: 0 20px;
+    position: relative;
+    
+}
+.comments-list .comment-author .fn ,
+.comments-list .comment-author .fn a{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000;
+    text-transform: capitalize; 
+}
+.comments-list .comment-author .says{
+    display: none;
+}
+.comments-list .comment-meta a:first-child{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #838383;
+}
+.comments-list .comment-meta .comment-edit-link{
+    position: absolute;
+    right: 20px;
+    margin-top: 4.9%;
+    color: #b59f5b;
+    font-weight: bold;
+}
+.comments-list .reply a{
+    margin-bottom: 20px;
+    display: block;
+    color: #b59f5b;
+    font-weight: bold;
+}
+/* ================= End Comment ============ */
+
 /* End Sigle Post */
 
 /* Start Aside */

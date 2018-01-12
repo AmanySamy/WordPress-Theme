@@ -30,7 +30,7 @@
                             </a>
                         </h3>                       
                         <span class="post-date"> <i class="fa fa-calendar fa-fw fa-lg"></i> <?php the_time('F j, Y'); ?></span>
-                        <span class="post-auther"> <i class="fa fa-user fa-fw fa-lg"></i> <?php the_author_posts_link(); ?></span>
+                        <!-- <span class="post-auther"> <i class="fa fa-user fa-fw fa-lg"></i> <?php the_author_posts_link(); ?></span> -->
                         <span class="post-tags"> 
                             <i class="fa fa-tags"></i>
                             <?php 
@@ -61,10 +61,51 @@
             </div>
             <!-- End Post -->
         </div>
+        <div class="clearfix"></div>
         <?php                           
              
-            } //End If Condition 
+        } //End If Condition ?>
+        
+        <!-- Start Author Section -->
+        <div class="row author">
+            <div class="col-md-2 author-img">
+                <!-- Get Author Avatar -->
+                <?php
+                    $avatar_arguments = array(
+                        'class' => 'img-responsive img-thumbnail center-block'
+                    );
+                    echo get_avatar(get_the_author_meta('ID'), 96, '' , 'User Avatar' , $avatar_arguments);
+                ?>
+            </div>
+            <div class="col-md-10 author-info">
+                <!-- Get Author Data -->
+                <h4>
+                    <?php 
+                        the_author_meta('first_name');
+                        echo(' ');
+                        the_author_meta('last_name');
+                        echo(' ( <span class="nickname">');
+                        the_author_meta('nickname');  
+                        echo '</span> )';             
+                    ?>
+                </h4>
+                <!-- Check if Author has Description -->
+                <?php 
+                // Check If Author have Biography 
+                if(get_the_author_meta('description')){ 
+                    echo '<div class="biography">';
+                    the_author_meta('description') ;
+                    echo '</div>';
+                }else{
+                    echo 'There is No Biography';
+                } ?>
+            </div>
+        </div>
+        <!-- End Author Section -->
 
+                
+        <!-- Start Post Pagination -->
+        <?php
             //  Get Previous Pages 
             echo '<div class="post-pagination">';
             if(get_previous_post_link()){
@@ -79,10 +120,16 @@
                 echo '<span class="no-next">Next Article: None</span>';
             }
             echo '</div>';
+        ?> 
+        <!-- End Post Pagination -->
 
+        <!-- Start Comment Template -->
+        <?php
             //Display Comments
             comments_template();
         ?>
+        <!-- End Comment Template -->
+   
 
         
     </section>
