@@ -16,6 +16,7 @@
         wp_enqueue_style("bootsrap-css",get_template_directory_uri() . "/css/bootstrap.min.css");
         wp_enqueue_style("bootsrap-font",get_template_directory_uri() . "/css/font-awesome.min.css");
         wp_enqueue_style("main",get_template_directory_uri() . "/css/main.css");
+        wp_enqueue_style("style",get_template_directory_uri() . "/css/style.css");
        
         
     }
@@ -61,6 +62,20 @@
         ));
     }
 
+    /* customize The Excerpt Word Length & Read More Dots */
+    function extend_excerpt_length($length){
+        if(is_author()){
+            return 40;
+        }else{
+            return 85;
+        }
+    }
+    function change_excerpt_dots($more){
+        return ' ...';
+    }
+    // Add Filter
+    add_filter('excerpt_length','extend_excerpt_length');
+    add_filter('excerpt_more','change_excerpt_dots');
     /*add action*/
     add_action('wp_enqueue_scripts','add_styles');
     add_action('wp_enqueue_scripts','add_scripts');

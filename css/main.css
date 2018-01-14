@@ -15,6 +15,7 @@
 }
 .posts .post{
     margin-bottom: 50px;
+    position: relative;
 }
 .img-responsive{
     width:100%;
@@ -76,17 +77,11 @@
 .post-comment .share i{
     margin: 0 5px;
 }
-/* =====================Start Post Author ===================== */
+/* =====================Start Post Author (single.php) ===================== */
 .author{
     padding: 20px;
-    border: 4px solid #e1d9bd;
-    margin: 0px;
-}
-.author .author-img{
-
-}
-.author .author-info{
-
+    box-shadow: 0px 0px 7px #b59f5b;
+    margin: 0px 0px 30px;
 }
 .author .author-info h4{
     font-family: 'Open Sans';
@@ -102,6 +97,18 @@
     margin-right: 15px;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.8;
+}
+.author .author-info .autor-posts-info,
+.author .author-info .autor-posts-info a{
+    padding: 15px 0;
+    font-size: 16px;
+    color: #b59f5b;
+    font-weight: bold;
+}
+.author .author-info .autor-posts-info span{
+    font-family: 'Open Sans';
+    color: #614f17;
+    font-size: 16px;
 }
 
 /* ===================== Start Post Pagination ===================== */
@@ -141,12 +148,20 @@
     left: 10px;
 }
 
-/* End Posts */
+/* =================  End Posts (index.php) ================= */
 
 
 
-/* Start Sigle Post */
+/*  =================  Start Sigle Post  ================= */
 .single-post .post-edit-link{
+    color: #b59f5b;
+    padding: 4px 6px;
+    border: 4px solid #e1d9bd;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 14px;
+    float: right;
+    width: 70px;
 }
 /* ================= Start Comment ============ */
 .comments-count,.comment-reply-title{
@@ -216,12 +231,16 @@
 }
 /* ================= End Comment ============ */
 
-/* End Sigle Post */
+/*  ================= End Sigle Post  =================*/
 
-/* Start Aside */
+/*  ================= Start Author Page  =================*/
+
+/*  ================= End Author Page  =================*/
+
+/*  ================= Start Aside ================= */
 aside{
     float: right;
     border: 1px solid #b59f5b;
     height: 1000px;
 }
-/* End Aside */
+/* ================= End Aside ================= */
