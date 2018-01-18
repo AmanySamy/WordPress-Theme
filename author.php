@@ -87,9 +87,9 @@
             <h3 class="author-posts-title">Latest <?php echo count_user_posts(get_the_author_meta('ID')) ?> Posts Written By <?php the_author_meta('first_name');?>  </h3>  
         <?php
         } //End of else   
-                // Loop Through Posts
-                while($author_posts->have_posts()){
-                    $author_posts->the_post();
+        // Loop Through Posts
+        while($author_posts->have_posts()){
+            $author_posts->the_post();
         ?>
         <div class="post">
             <!-- Start Post -->
@@ -117,34 +117,44 @@
             <!-- End Post -->
         </div>
         <?php                           
-                }// End of Loop
-                
-            } //End If Condition 
+        }// End of Loop
+        
+    } //End If Condition 
 
-            //  Get Previous Pages 
-            echo '<div class="post-pagination">';
-            if(get_previous_posts_link()){
-                echo "<span class='prev'>"; previous_posts_link('Prev'); echo "</span>";
-            }else{
-                echo '<span class="no-prev">Prev</span>';
-            }
-            //  Get Next Pages 
-            if(get_next_posts_link()){
-                echo "<span class='next'>"; next_posts_link('Next'); echo "</span>";
-            }else{
-                echo '<span class="no-next">Next</span>';
-            }
-            echo '</div>';
-            
-            /* Restore original Post Data */
-            wp_reset_postdata();
+    //  Get Previous Pages 
+    /*
+        echo '<div class="post-pagination">';
+        if(get_previous_posts_link()){
+            echo "<span class='prev'>"; previous_posts_link('Prev'); echo "</span>";
+        }else{
+            echo '<span class="no-prev">Prev</span>';
+        }
+        //  Get Next Pages 
+        if(get_next_posts_link()){
+            echo "<span class='next'>"; next_posts_link('Next'); echo "</span>";
+        }else{
+            echo '<span class="no-next">Next</span>';
+        }
+        echo '</div>';
+    */
+    
+    /* Restore original Post Data */
+    wp_reset_postdata();
         ?>
     </div>
     <!-- End Row -->
-    
+
     <!-- Start Row Author Comments -->
-    <?php
-        $comments_per_page = 6;
+    <div class="row author-comments">    
+        <!-- Php Function to Get Author Comments -->
+        <?php
+        $comments_per_page = 5;
+        // Get Comments Count
+        $comments_count_args=array(
+            'user_id' => get_the_author_meta('ID'),
+            'count'   => true
+        );
+        $comments_count = get_comments($comments_count_args);
         $comments_arguments=array(
             'user_id'       => get_the_author_meta('ID'),
             'status'        => 'approve',
@@ -154,15 +164,48 @@
         ); 
         // Return array of comments that match comments_arguments
         $comments = get_comments($comments_arguments);
+        // Check If This Author has written any Comments
+        if($comments){ ?> 
+            <?php if($comments_per_page > $comments_count){?>
+                <h3 class="author-comments-title">Latest Comments Written By <?php the_author_meta('first_name');?>  </h3>
+            <?php }else{?>
+                <h3 class="author-comments-title">Latest <?php echo $comments_per_page ?> Comments Written By <?php the_author_meta('first_name');?>  </h3>
+            <?php } ?>
+        
+        <?php
         // Loop Through Output Comments Array
         foreach($comments as $comment){
-    ?>
+        ?>
+        <div class="comment">
+            <!-- Display Comments -->
+            <h3 class="post-title">
+                <a href="<?php echo get_permalink($comment->comment_post_ID) ?>">
+                    <?php echo get_the_title($comment->comment_post_ID) ?>
+                </a>
+            </h3>
+            <span class="comment-date">
+                <i class='fa fa-calendar'></i>
+                <?php echo 'Added on ' . mysql2date('l, F, j, Y',$comment->comment_date) ?>
+            </span>
+            <p class="comment-content">
+                <?php echo $comment->comment_content ?>
+            </p>  
+        </div>
+                  
+        <?php
+        }//End foreach
+                    
+        }else{?>
+            <div class="author-comments">
+                <?php echo 'This Author hasn\'t written any Comments '; ?>
+            </div>
+            
+        <?php } //End of else ?>
+    </div>
+    <!-- End Row --> 
 
         
-    <?php
-        }//End foreach
-    ?>
-    <!-- End Row -->
+    
 
 </div>
 
