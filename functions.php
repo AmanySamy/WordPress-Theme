@@ -4,7 +4,8 @@
     require_once('wp-bootstrap-navwalker.php');
 
     // Add Featured Image Support Thambnail
-    add_theme_support('post-thembnails');
+    add_theme_support('post-thumbnails');
+    
 
     /*
     /*add my custom system
@@ -80,4 +81,19 @@
     add_action('wp_enqueue_scripts','add_styles');
     add_action('wp_enqueue_scripts','add_scripts');
     add_action('init','register_custom_menu');
+
+    // Make Numeric Pagination
+    function add_numeric_pagination(){
+        global $wp_query;
+        $total_pages_number = $wp_query->max_num_pages; // Get Total Pages 
+        $current_page = max(1,get_query_var('paged')); // Get Current Page
+        if($total_pages_number > 1){
+            return paginate_links( array(
+                'base'      => get_pagenum_link() . '%_%' ,               
+                'current'   => $current_page ,
+                'prev_text' => '«',
+                'next_text' => ' »',
+            ) );
+        }
+    }
 

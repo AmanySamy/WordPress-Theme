@@ -4,12 +4,12 @@
        <div class="row">  
         <!-- Start Posts -->
         <section class="posts">
-            <!-- Get Posts Dynamically With Loop -->
-            <?php  
-                // Check if there are posts
-                if(have_posts()){
-                the_post(); 
-            ?>
+        <!-- Get Posts Dynamically With Loop -->
+        <?php  
+        // Check if there are posts
+        if(have_posts()){
+        the_post(); 
+        ?>
             <div class="post single-post">
                 <!-- Make Edit Post -->            
                 <?php edit_post_link('<i class="fa fa-pencil"></i> Edit'); ?>
@@ -66,6 +66,10 @@
             <?php                           
                 
             } //End If Condition ?>
+
+            <!-- Start Getting Posts within Same Gategory -->
+            
+            <!-- End Getting Posts within Same Gategory -->
             
             <!-- Start Author Section -->
             <div class="row author">

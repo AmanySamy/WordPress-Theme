@@ -1,6 +1,33 @@
 //************ Start author.php ***********
 $main-color : #b59f5b;
 $second-color : #e1d9bd;
+
+/* ====== Main Page ==== */
+.main-page{
+    .post-pagination{
+        font-family: 'Open Sans', sans-serif;
+        
+        .page-numbers{
+            color: #FFF;
+            background: $second-color;
+            border-radius: 5px;
+            padding: 5px 10px;
+            transition : all .3s ease-in-out;
+        }
+        .current,.page-numbers:hover{
+            color: #FFF;
+            background: $main-color;
+            font-weight: bold;
+            border: 2px solid #b59f5b;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        
+        
+    }
+}
+
+/* ====== Author Page ==== */
 .author-page{
     .author-page-title{
         padding: 20px 25px;

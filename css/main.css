@@ -240,7 +240,6 @@
 /*  ================= Start Aside ================= */
 aside{
     float: right;
-    border: 1px solid #b59f5b;
-    height: 1000px;
+    padding: 50px 20px;
 }
 /* ================= End Aside ================= */

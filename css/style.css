@@ -1,3 +1,26 @@
+/* ====== Main Page ==== */
+.main-page .post-pagination {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-page .post-pagination .page-numbers {
+  color: #FFF;
+  background: #e1d9bd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: all .3s ease-in-out;
+}
+
+.main-page .post-pagination .current, .main-page .post-pagination .page-numbers:hover {
+  color: #FFF;
+  background: #b59f5b;
+  font-weight: bold;
+  border: 2px solid #b59f5b;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* ====== Author Page ==== */
 .author-page .author-page-title {
   padding: 20px 25px;
   text-align: center;
