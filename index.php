@@ -81,12 +81,15 @@
 
 
         <!-- Start Aside -->
-        <aside class="sidebar col-md-4">
-            <?php get_sidebar() ?>
-            <h2>List of authors:</h2>
-            <ul>
-            <?php wp_list_authors(); ?>
-            </ul> 
+        <aside class="sidebar col-md-offset-1 col-md-3">
+            <?php /*  
+                if(is_active_sidebar('main-sidebar')){
+                    dynamic_sidebar( 'main-sidebar' );
+                }*/
+
+                get_sidebar();
+            ?>
+            
         </aside>
         <!-- End Aside -->
         </div><!--  End Main Row -->

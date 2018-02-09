@@ -172,3 +172,18 @@ $second-color : #e1d9bd;
         }
     }
 }
+
+/* ====== sidebar Page ==== */
+.sidebar{
+    padding: 10px 0px;
+    .widget{
+        .widget-title{
+            background: #9176d1;
+            padding: 10px;
+        }
+        .widget-content{
+            background: #838383;
+            padding: 10px;
+        }
+    }
+}

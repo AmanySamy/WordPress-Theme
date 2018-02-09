@@ -170,4 +170,19 @@
   margin: 10px 0px;
   font-family: 'Open Sans', sans-serif;
 }
+
+/* ====== sidebar Page ==== */
+.sidebar {
+  padding: 10px 0px;
+}
+
+.sidebar .widget .widget-title {
+  background: #9176d1;
+  padding: 10px;
+}
+
+.sidebar .widget .widget-content {
+  background: #838383;
+  padding: 10px;
+}
 /*# sourceMappingURL=style.css.map */

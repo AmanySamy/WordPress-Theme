@@ -97,3 +97,20 @@
         }
     }
 
+    // Register Sidebar
+    function add_sidebar(){
+        register_sidebar(array(
+            'name'          => 'Main Sidebar',
+            'id'            => 'main-sidebar',
+            'description'   => 'Main Sidebar',
+            'class'         => 'main-sidebar',
+            'before_widget' => '<div class="widget">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>'
+        ));
+    }
+    // add Acrion of register Sidebar
+    add_action( 'widgets_init', 'add_sidebar');
+    
+
