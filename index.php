@@ -77,9 +77,7 @@
             
         </section>
         <!-- End Posts -->
-
-
-
+        
         <!-- Start Aside -->
         <aside class="sidebar col-md-offset-1 col-md-3">
             <?php /*  
