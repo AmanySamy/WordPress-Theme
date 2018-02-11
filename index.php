@@ -80,12 +80,12 @@
         
         <!-- Start Aside -->
         <aside class="sidebar col-md-offset-1 col-md-3">
-            <?php /*  
-                if(is_active_sidebar('main-sidebar')){
-                    dynamic_sidebar( 'main-sidebar' );
-                }*/
+            <?php   
+                // if(is_active_sidebar('main-sidebar')){
+                    // dynamic_sidebar( 'main-sidebar' );
+                // }
 
-                get_sidebar();
+                 get_sidebar();
             ?>
             
         </aside>
