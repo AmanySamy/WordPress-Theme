@@ -56,7 +56,7 @@
     function bootstrap_menu(){
         wp_nav_menu(array(
             'theme_location' => 'bootstrap-menu',
-            'menu_class'  => 'nav navbar-nav navbar-right',
+            'menu_class'  => 'nav navbar-nav',
             'container' => '',
             'depth' => 2,
             'walker' => new wp_bootstrap_navwalker()

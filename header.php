@@ -19,7 +19,7 @@
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+                    
                 </div><!-- End of navbar-header -->  
              
                 <!-- Navbar collapsed Menu -->
@@ -29,4 +29,9 @@
             </div>
         </nav>
         <!-- End Navbar -->
+
+        <!-- Logo -->
+        <h1 class="theme-title">
+            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+        </h1>
         
