@@ -302,16 +302,18 @@ $second-color : #e1d9bd;
             }
             
         }
-        .search{
+        .searchform{
            .screen-reader-text{
                display: none;
            } 
            #s{
-                width: 80%;
+               float: left;
+                width: 83%;
                 height: 48px;
                 padding: 20px;
                 background: #f4f7f6;
                 border: 0;
+                margin: 0;
                 font-size: 13px;
                 font-family: 'Open Sans';
                 &:focus{
@@ -322,8 +324,7 @@ $second-color : #e1d9bd;
                 background: #b59f5b;
                 border: 0;
                 color: #FFF;
-                width: 18%;
-                margin-left: -4px;
+                width: 17%;
                 height: 48px;
            }
         }

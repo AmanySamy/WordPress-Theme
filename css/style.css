@@ -311,30 +311,31 @@
   cursor: pointer;
 }
 
-.sidebar .widget .search .screen-reader-text {
+.sidebar .widget .searchform .screen-reader-text {
   display: none;
 }
 
-.sidebar .widget .search #s {
-  width: 80%;
+.sidebar .widget .searchform #s {
+  float: left;
+  width: 83%;
   height: 48px;
   padding: 20px;
   background: #f4f7f6;
   border: 0;
+  margin: 0;
   font-size: 13px;
   font-family: 'Open Sans';
 }
 
-.sidebar .widget .search #s:focus {
+.sidebar .widget .searchform #s:focus {
   outline: 0;
 }
 
-.sidebar .widget .search #searchsubmit {
+.sidebar .widget .searchform #searchsubmit {
   background: #b59f5b;
   border: 0;
   color: #FFF;
-  width: 18%;
-  margin-left: -4px;
+  width: 17%;
   height: 48px;
 }
 /*# sourceMappingURL=style.css.map */

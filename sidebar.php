@@ -6,9 +6,9 @@
             $avatar_arguments = array(
                 'class' => 'img-responsive img-thumbnail center-block img-circle'
             );
-            echo get_avatar(get_the_author_meta('ID'), 96, '' , 'User Avatar' , $avatar_arguments);
+            // echo get_avatar(get_the_author_meta('ID'), 96, '' , 'User Avatar' , $avatar_arguments);
         ?>
-        <!-- <img class="img-responsive" src="wp-content\themes\mytheme\img\About-me.png" alt="User Image"> -->
+        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/About-me.png" alt="User Image">
     </div>    
     <h3 class="title text-center text-uppercase">About Me</h3>
     
@@ -53,51 +53,51 @@
        <div class="row">
             <div class="col-md-4 col-sm-4 ">
                 <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\1.png" alt="Post Image">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\1.png" alt="Post Image">
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 ">
                 <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\2.png" alt="Post Image">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\2.png" alt="Post Image">
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 ">
                 <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\3.png" alt="Post Image">
-                </div>
-            </div>
-       </div>
-       <div class="row">
-            <div class="col-md-4 col-sm-4 ">
-                <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\4.png" alt="Post Image">
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 ">
-                <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\5.png" alt="Post Image">
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 ">
-                <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\6.png" alt="Post Image">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\3.png" alt="Post Image">
                 </div>
             </div>
        </div>
        <div class="row">
             <div class="col-md-4 col-sm-4 ">
                 <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\7.png" alt="Post Image">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\4.png" alt="Post Image">
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 ">
                 <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\8.png" alt="Post Image">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\5.png" alt="Post Image">
                 </div>
             </div>
             <div class="col-md-4 col-sm-4 ">
                 <div class="post-img">
-                    <img class="img-responsive" src="wp-content\themes\mytheme\img\9.png" alt="Post Image">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\6.png" alt="Post Image">
+                </div>
+            </div>
+       </div>
+       <div class="row">
+            <div class="col-md-4 col-sm-4 ">
+                <div class="post-img">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\7.png" alt="Post Image">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 ">
+                <div class="post-img">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\8.png" alt="Post Image">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 ">
+                <div class="post-img">
+                    <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>\img\9.png" alt="Post Image">
                 </div>
             </div>
        </div>
@@ -164,7 +164,7 @@
 <!-- Widget 6 [Search Form] -->
 <div class="widget">  
     <div class="widget-content">
-    
+        <?php get_search_form(); ?>
     </div>
 </div>
 
