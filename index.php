@@ -7,6 +7,7 @@
     <section class="posts col-md-8">
         <!-- Get Posts Dynamically With Loop -->
         <?php  
+        
         // Check if there are posts
         if(have_posts()){
             // Loop Through Posts
@@ -29,7 +30,7 @@
                         <h3 class="post-title">
                         <a href="<?php the_permalink() ?>">
                                 <?php the_title(); ?>
-                            </a>
+                        </a>
                         </h3>                       
                         <span class="post-date"><?php the_time('F j, Y'); ?></span>
                         <span class="post-auther"> By <?php the_author_posts_link(); ?></span>
@@ -63,6 +64,7 @@
             </div>
             <!-- End Post -->
         </div>
+       
         <?php                           
             }// End of Loop
             
@@ -73,24 +75,48 @@
             <?php echo add_numeric_pagination(); ?>
         </div>  
         
-
             
-        </section>
-        <!-- End Posts -->
+    </section>
+    <!-- End Posts -->
         
-        <!-- Start Aside -->
-        <aside class="sidebar col-md-offset-1 col-md-3">
-            <?php   
-                // if(is_active_sidebar('main-sidebar')){
-                    // dynamic_sidebar( 'main-sidebar' );
-                // }
+    <!-- Start Aside -->
+    <aside class="sidebar col-md-offset-1 col-md-3">
+        <?php   
+            // if(is_active_sidebar('main-sidebar')){
+                // dynamic_sidebar( 'main-sidebar' );
+            // }
 
-                 get_sidebar();
-            ?>
-            
-        </aside>
-        <!-- End Aside -->
-        </div><!--  End Main Row -->
-   </div><!--  End Main Container -->
+                get_sidebar();
+        ?>
+        
+    </aside>
+    <!-- End Aside -->
+    </div><!--  End Main Row -->
+
+    <div class="row">
+    <h2></h2>
+    <!-- Carousel -->
+    <div class="owl-carousel owl-theme">
+        <?php         
+        if(have_posts()){  // Check if there are posts         
+            while(have_posts()){ // Loop Through Posts
+                the_post();
+        ?>
+        <!-- Image1 -->
+        <div class="owl-item">
+            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+                <!-- the_post_thumbnail($size,$attr); -->
+                <?php the_post_thumbnail( ' ' , ['class' => 'img-responsive'] );  ?>                       
+            </a>                    
+        </div>
+        <?php                           
+            }// End of Loop           
+        } //End If Condition 
+        ?>
+    </div>
+</div>
+    
+</div><!--  End Main Container -->
+
    
 <?php get_footer(); #Impement Footer and include scripts?>

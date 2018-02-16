@@ -16,6 +16,8 @@
 
         wp_enqueue_style("bootsrap-css",get_template_directory_uri() . "/css/bootstrap.min.css");
         wp_enqueue_style("bootsrap-font",get_template_directory_uri() . "/css/font-awesome.min.css");
+        wp_enqueue_style("owl-carousel",get_template_directory_uri() . "/css/owl.carousel.min.css");
+        wp_enqueue_style("owl-theme",get_template_directory_uri() . "/css/owl.theme.default.min.css");
         wp_enqueue_style("main",get_template_directory_uri() . "/css/main.css");
         wp_enqueue_style("style",get_template_directory_uri() . "/css/style.css");
        
@@ -31,7 +33,8 @@
         wp_register_script('jquery', includes_url('/js/jquery/jquery.js') ,false, '' ,true);//register anew query 
         wp_enqueue_script('jquery');//enqueue the new jquery
         wp_enqueue_script("bootstrap-js",get_template_directory_uri()."/js/bootstrap.min.js",array('jquery'),false,true);
-        wp_enqueue_script('main-js',get_template_directory_uri()."/js/main.js",array(),false,true);//start anew jquery
+        
+        wp_enqueue_script('owl-carousel-js',get_template_directory_uri()."/js/owl.carousel.min.js", array( 'jquery' ),false,true);//start anew jquery
         // Add Html5shive For Old Browsers
         wp_enqueue_script('html5shiv' , get_template_directory_uri()."/js/html5shiv.js",array(),false,true);
         //  Add Conditional Comment For Html5shiv
@@ -40,6 +43,7 @@
         wp_enqueue_script('respond' , get_template_directory_uri()."/js/respond.min.js",array(),false,true);
         //  Add Conditional Comment For Respond
         wp_script_add_data('respond' ,'conditional' , 'lt IE 9');
+        wp_enqueue_script('main-js',get_template_directory_uri()."/js/main.js",array(),false,true);//start anew jquery
 
     }
     
