@@ -38,7 +38,7 @@
 <!-- Second Widget [Subscribe] -->
 <div class="widget">
     <h3 class="widget-title text-center text-uppercase"> NEWSLETTER </h3>
-    <div class="widget-content">
+    <div class="widget-content subscribe">
         <!-- Subscribe Form -->
        <form action="">
           <input type="email" name="email" value=" Your email address">  
@@ -49,7 +49,7 @@
 <!-- Widget 3 [FOLLOW@NOEMI.THEME] -->
 <div class="widget">
     <h3 class="widget-title text-center text-uppercase">FOLLOW@NOEMI.THEME </h3>
-    <div class="widget-content">
+    <div class="widget-content follow">
        <div class="row">
             <div class="col-md-4 col-sm-4 ">
                 <div class="post-img">
@@ -124,6 +124,7 @@
        </ul>
     </div>
 </div>
+
 <!-- Widget 5 [recent Posts] -->
 <div class="widget">
     <h3 class="widget-title text-center text-uppercase">recent Posts</h3>
@@ -161,10 +162,36 @@
         </ul>
     </div>
 </div>
+
 <!-- Widget 6 [Search Form] -->
 <div class="widget">  
-    <div class="widget-content">
+    <div class="widget-content ">
         <?php get_search_form(); ?>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<!-- Widget 7 [Banner] -->
+<div class="widget">
+    <h3 class="widget-title text-center text-uppercase">Banner</h3>
+    <div class="widget-content">
+        <img src="<?php echo get_template_directory_uri(); ?>\img\banner.png" alt="">
+    </div>
+</div>
+
+<!-- Widget 8 [Facebook] -->
+<div class="widget">
+    <h3 class="widget-title text-center text-uppercase">find us on Facebook</h3>
+    <div class="widget-content">
+        <img src="<?php echo get_template_directory_uri(); ?>\img\facebook.png" alt="">
+    </div>
+</div>
+
+<!-- Widget 9 [Facebook] -->
+<div class="widget">
+    <h3 class="widget-title text-center text-uppercase">tags</h3>
+    <div class="widget-content tag">
+        <?php  wp_tag_cloud(  ); ?>
     </div>
 </div>
 

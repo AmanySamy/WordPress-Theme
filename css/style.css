@@ -322,7 +322,7 @@
   margin: 5px 0px;
 }
 
-.sidebar .widget .widget-content form input {
+.sidebar .widget .subscribe form input {
   width: 100%;
   display: block;
   margin: 10px 0px;
@@ -330,13 +330,13 @@
   border: 0;
 }
 
-.sidebar .widget .widget-content form input[type="email"] {
+.sidebar .widget .subscribe form input[type="email"] {
   background: #f4f7f6;
   font-size: 13px;
   font-family: 'Open Sans';
 }
 
-.sidebar .widget .widget-content form input[type="submit"] {
+.sidebar .widget .subscribe form input[type="submit"] {
   background: #b59f5b;
   color: #FFF;
   font-size: 14px;
@@ -345,7 +345,7 @@
   text-transform: uppercase;
 }
 
-.sidebar .widget .widget-content .post-img {
+.sidebar .widget .follow .post-img {
   margin: 5px -10px;
   background: #fdf9f2;
   cursor: pointer;
@@ -377,5 +377,30 @@
   color: #FFF;
   width: 17%;
   height: 48px;
+}
+
+.sidebar .widget .tag .tag-cloud-link {
+  font-family: 'Open Sans';
+  font-size: 12px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #f4f3f1;
+  color: #000;
+  padding: 5px;
+  display: inline-block;
+  margin: 3px 3px 3px 0px;
+}
+
+.sidebar .widget .tag .tag-cloud-link:hover {
+  border: 2px solid #e1d9bd;
+}
+
+.owl-carousel {
+  overflow: hidden;
+  display: block;
+}
+
+.owl-item {
+  margin: 5px;
 }
 /*# sourceMappingURL=style.css.map */
